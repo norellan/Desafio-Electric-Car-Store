@@ -1,0 +1,284 @@
+html,
+body {
+  padding: 0%;
+  margin: 0%;
+  font-family: "Oswald", sans-serif;
+  font-size: medium;
+  background-color: #f9ebc8;
+}
+.box {
+  border: none 12px black;
+  margin: 0%;
+}
+
+.nav {
+  grid-area: nav;
+  background: #a0bcc2;
+  color: white;
+}
+
+.container-fluid {
+  background-color: #a0bcc2;
+}
+
+.container-fluid .navbar-brand {
+  display: flex;
+  align-items: center;
+  margin: 0%;
+  padding: 0%;
+}
+
+.container-fluid .navbar-brand h3 {
+  font-size: 80%;
+  padding: 0%;
+  margin: 0%;
+  margin-left: 3%;
+  padding-left: 3%;
+}
+
+.container-fluid .navbar-brand i {
+  font-size: 190%;
+  margin: 0%;
+  padding: 0%;
+}
+
+.nav .navbar {
+  background-color: #a0bcc2;
+  width: 100%;
+}
+
+.select {
+  grid-area: select;
+  background-color: #dae5d0;
+  color: white;
+  height: 15vh;
+}
+
+.select.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-label {
+  color: black;
+  margin: 0%;
+  margin-top: 2%;
+  margin-bottom: 0%;
+}
+
+.form-select {
+  width: 80%;
+}
+
+.main {
+  grid-area: main;
+  background-color: #1e88e5;
+  color: white;
+  width: 100%;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: auto;
+  height: auto;
+  justify-items: center;
+  background-color: rgb(244, 244, 244);
+  padding: 0.5rem 0.5rem;
+  gap: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px rgb(129, 129, 129);
+  width: 20rem;
+
+  text-align: justify;
+  padding: 0rem 0.75rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.card h3 {
+  color: #19282f;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.card p {
+  color: #013775;
+}
+
+.container-img {
+  width: 100%;
+}
+
+.container-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  padding: 0.5rem 0rem;
+}
+
+.card .btn {
+  margin: 1rem 0rem;
+  background-color: #6c8f97;
+  width: 10rem;
+  height: auto;
+}
+
+.paginacion {
+  grid-area: pag;
+  background-color: rgb(244, 244, 244);
+}
+
+.footer {
+  display: flex;
+  grid-area: footer;
+  background: #a0bcc2;
+  color: white;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.footer h3 {
+  text-align: center;
+  font-size: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+@media (max-width: 576px) {
+  .container-grid {
+    display: grid;
+    border: 1px solid black;
+    grid-template-rows: 8% 12% auto 6.5% 18%;
+
+    grid-template-areas:
+      "nav"
+      "select"
+      "main"
+      "pag"
+      "footer";
+    height: 100vh;
+  }
+}
+
+@media (min-width: 576px) {
+  .container-grid {
+    display: grid;
+    border: 1px solid black;
+    grid-template-rows: 10% auto 10%;
+    grid-template-columns: 18% 82%;
+    grid-template-areas:
+      "nav select"
+      "nav main"
+      "nav main"
+      "nav main"
+      "footer pag";
+
+    height: 100vh;
+  }
+
+  .container-fluid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav .navbar {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .container-fluid .navbar-brand {
+    display: flex;
+    align-items: center;
+    margin: 0%;
+    padding: 0%;
+  }
+
+  .container-fluid .navbar-brand h3 {
+    text-align: center;
+    font-size: 62%;
+    margin: 0%;
+    padding: 0%;
+    margin-left: 4%;
+  }
+
+  .container-fluid .navbar-brand i {
+    font-size: 90%;
+    margin: 0%;
+    padding: 0%;
+  }
+
+  .container-fluid .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-label {
+    color: black;
+    margin: 0%;
+  }
+  .main {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 5px;
+    row-gap: 5px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: solid 1px rgb(129, 129, 129);
+    width: 100%;
+    height: auto;
+    text-align: justify;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .card h3 {
+    color: #19282f;
+    padding: 0%;
+    margin: 0%;
+  }
+
+  .card p {
+    color: #013775;
+    margin: 0%;
+    padding: 0%;
+  }
+
+  .container-img {
+    width: 70%;
+  }
+
+  .container-img img {
+    width: 100%;
+    object-fit: cover;
+    padding: 0.5rem 0rem;
+  }
+
+  .card .btn {
+    margin: 0%;
+    padding: 0%;
+    background-color: #839ca1;
+    width: 5em;
+    height: auto;
+  }
+
+  .paginacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
